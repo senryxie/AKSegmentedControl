@@ -168,7 +168,7 @@
     [separatorsArray removeAllObjects];
     
     _buttonsArray = buttonsArray;
-    
+    [self setSelectedIndex:0];
     [_buttonsArray enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
          [self addSubview:(UIButton *)obj];
         [(UIButton *)obj addTarget:self action:@selector(segmentButtonPressed:) forControlEvents:UIControlEventTouchDown];
